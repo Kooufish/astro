@@ -29,10 +29,7 @@ def main():
         
         screen.fill('black')
         draw_player.draw(screen)
-        pygame.display.flip()
-        
-        
-    
+        pygame.display.flip()  
     
 if __name__ == "__main__":
     main()
