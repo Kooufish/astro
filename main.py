@@ -20,13 +20,18 @@ def main():
     draw_player = player.Player(x, y)
 
     while True:
+        dt = timer.tick(60) / 1000
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+        
+        draw_player.update(dt)
+        
         screen.fill('black')
         draw_player.draw(screen)
         pygame.display.flip()
-        dt = timer.tick(60)
+        
+        
     
     
 if __name__ == "__main__":
